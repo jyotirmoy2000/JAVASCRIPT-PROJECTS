@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg , #cf9aff ,#95c0ff);
+    padding: 200px;
+}
+
+.container{
+    background-color: #756AB6;
+    max-width: 90%;
+    width: 500px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px #33186B ;
+    margin: 0 auto;
+}
+
+.heading img{
+ width: 50px;
+ margin-right: 10px;
+}
+
+.heading{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.btn{
+    background-color: #33186B;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 27px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight:bolder;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.input-box{
+    position: relative;
+    max-width: 500px;
+    height: 150px;
+    background-color: #bcb6b6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+}
+
+.input-box img{
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,44 @@
+
+// calling API
+const API_KEY = "8c073d95bab3e57fd49acace34b00423";
+
+async function fetchWeatherDetails() {
+   try{
+        let city = "Bongaon";
+
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
+
+        const data = await response.json();
+        console.log("Weather data -> " , data);
+        
+        displayWeatherDetails(data);
+       
+   }
+   catch(e){
+      console.log("Error Found" , e); 
+   }
+}
+
+function displayWeatherDetails(data) {
+   let newpara = document.createElement('p');
+   newpara.textContent = `${data?.main?.temp.toFixed(2)}°C`;
+   document.body.appendChild(newpara);
+}
+
+// Current Location
+function getLocation() {
+   if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(showPosition);
+   }
+   else{
+      console.log("No Geolocation support");
+   }
+}
+
+function showPosition(position) {
+   let lat = position.coords.latitude;
+   let longi = position.coords.longitude;
+
+   console.log(lat);
+   console.log(longi)
+}
